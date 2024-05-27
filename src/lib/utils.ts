@@ -5,6 +5,8 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export const convertFileToUrl = (file: File) => URL.createObjectURL(file);
+
 /**
  * Formats a given date string into a formatted date and time string.
  *
