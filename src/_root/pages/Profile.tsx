@@ -29,7 +29,7 @@ const StatBlock = ({ value, label }: StabBlockProps) => (
 const Profile = () => {
   const { id } = useParams();
   const { user } = useUserContext();
-  const { pathName } = useLocation();
+  const { pathname } = useLocation();
 
   const { data: currentUser } = useGetUserById(id || "");
 
@@ -104,7 +104,7 @@ const Profile = () => {
           <Link
             to={`/profile/${id}`}
             className={`profile-tab rounded-l-lg ${
-              pathName === `/profile/${id}` && "!bg-dark-3"
+              pathname === `/profile/${id}` && "!bg-dark-3"
             }`}
           >
             <img
@@ -118,7 +118,7 @@ const Profile = () => {
           <Link
             to={`/profile/${id}/liked-posts`}
             className={`profile-tab rounded-r-lg ${
-              pathName === `/profile/${id}/liked-posts` && "!bg-dark-3"
+              pathname === `/profile/${id}/liked-posts` && "!bg-dark-3"
             }`}
           >
             <img
