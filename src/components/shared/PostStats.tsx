@@ -50,7 +50,6 @@ const PostStats = ({ post, userId }: PostStatsProps) => {
 
   const handleSavePost = (e: React.MouseEvent) => {
     e.stopPropagation();
-    console.log(savedPostRecord);
     if (savedPostRecord) {
       setIsSaved(false);
       deleteSavedPost(savedPostRecord.$id);
